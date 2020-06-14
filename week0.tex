@@ -1,0 +1,111 @@
+\section{Week 0: System of Linear Equations}
+
+\subsection{Solving System of Linear Equations by Row Reduce}
+\begin{enumerate}[(a)]
+    \item The augmented matrices of two system of linear equations has been reduced by row operations to the form below. In each case, continue the appropriate row operations and describe the solution set of the original system.
+    \begin{enumerate}[i]
+        \item
+        $$
+        \left[\begin{array}{rrr|r}
+            1 & 7 & 3 & -4 \\
+            0 & 1 & -1 & 3 \\
+            0 & 0 & 0 & 1 \\
+            0 & 0 & 1 & -2
+        \end{array}\right]
+        $$
+        \item
+        $$
+        \left[\begin{array}{rrrr|r}
+            1 & -1 & 0 & 0 & -4 \\
+            0 & 1 & -3 & 0 & -7 \\
+            0 & 0 & 1 & -3 & -1 \\
+            0 & 0 & 0 & 2 & 4
+        \end{array}\right]
+        $$
+    \end{enumerate}
+    \item
+    Find the general solutions of the systems whose augmented matrices are given below.
+    \begin{enumerate}[i]
+        \item
+        $\left[\begin{array}{ccc|c}1 & 3 & 4 & 7 \\ 3 & 9 & 7 & 6\end{array}\right]$
+        \item
+        $\left[\begin{array}{rrr|r}0 & 1 & -6 & 5 \\ 1 & -2 & 7 & -6\end{array}\right]$
+    \end{enumerate}
+    
+ \end{enumerate}   
+\subsection{The Solutions of System of Linear Equations}
+\begin{enumerate}[(a)]
+    \item Determine if the following system is consistent.
+    $$
+    \begin{aligned}
+        x_{1}+3 x_{3}&=2 \\
+        x_{2}-3 x_{4}&=3 \\
+        -2 x_{2}+3 x_{3}+2 x_{4}&=1 \\
+        3 x_{1}+7 x_{4}&=-5
+    \end{aligned}
+    $$
+    \item Determine the value(s) $h$ such that the given augmented matrix corresponds to a consistent linear system.
+    \begin{enumerate}[i]
+        \item 
+        $$
+        \left[\begin{array}{rr|r}
+        1 & h & 4 \\
+        3 & 6 & 8
+        \end{array}\right]
+        $$
+        \item
+        $$
+        \left[\begin{array}{rr|r}
+        1 & 3 & -2 \\
+        -4 & h & 8
+        \end{array}\right]
+        $$
+    \end{enumerate}
+    \item
+    Find an equation involving $g, h,$ and $k$ that makes this augmented matrix correspond to a consistent system:
+    $$\left[\begin{array}{rrr|r}1 & -4 & 7 & g \\ 0 & 3 & -5 & h \\ -2 & 5 & -9 & k\end{array}\right]$$
+    \item
+    Choose $h$ and $k$ such that the system has (a) no solution, (b) a unique solution, and (c) many solutions. Give separate answers for each part.
+    \begin{equation*}
+        \begin{cases}
+        x_{1}+h x_{2}=2\\
+        4 x_{1}+8 x_{2}=k
+        \end{cases}
+    \end{equation*}
+    \item
+    A system of linear equations with fewer equations than unknowns is sometimes called an underdetermined system. Suppose that such a system happens to be consistent. Explain why there must be an infinite number of solutions.
+    \item
+    Write the solution set of the given homogeneous system in parametric vector form.
+    \begin{equation*}
+        \begin{cases}
+            x_{1}+3 x_{2}+x_{3}=0\\
+            -4 x_{1}-9 x_{2}+2 x_{3}=0 \\
+            -3 x_{2}-6 x_{3}=0
+        \end{cases}
+    \end{equation*}
+    %$$\mathbf{x}=\left[\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right]=x_{3}\left[\begin{array}{r}5 \\ -2 \\ 1\end{array}\right]$$%
+    \item
+    Follow the method of Example 3 to describe the solutions of the following system in parametric vector form. Also, give a geometric description of the solution set and compare it to that in Exercise 5
+    \begin{equation*}
+        \begin{cases}
+            x_{1}+3 x_{2}+x_{3} &=1 \\
+            -4 x_{1}-9 x_{2}+2 x_{3} &=-1 \\
+            -3 x_{2}-6 x_{3} &=-3
+        \end{cases}
+    \end{equation*}
+    %$$
+    %\mathbf{x}=\left[\begin{array}{l}
+    %x_{1} \\
+    %x_{2} \\
+    %x_{3}
+    %\end{array}\right]=\left[\begin{array}{r}
+    %-2 \\
+    %1 \\
+    %0
+    %\end{array}\right]+x_{3}\left[\begin{array}{r}
+    %5 \\
+    %-2 \\
+    %1
+    %\end{array}\right]
+    %$$
+\end{enumerate}
