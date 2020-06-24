@@ -12,10 +12,12 @@
 % https://www.overleaf.com/learn/latex/Mathematical_expressions
 % https://en.wikibooks.org/wiki/LaTeX/Mathematics
 \usepackage{amsmath,amsfonts,amssymb,mathtools,amsthm}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{claim}[theorem]{Claim}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
 \newcommand{\norm}[1]{\left\|#1\right\|}
 \newcommand{\vecdot}[2]{\left\langle#1,#2\right\rangle}
 
@@ -48,5 +50,6 @@
 \maketitle
 
 \input{week0}
+\input{week1}
 
 \end{document}

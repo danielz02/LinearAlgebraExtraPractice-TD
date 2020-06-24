@@ -1,0 +1,195 @@
+\section{Week 1: System of Linear Equations (Cont.d)}
+
+\subsection{Linear Combination}
+\begin{enumerate}[(a)]
+    \item Write down the vector equation that is equivalent to the given linear system.
+        $$
+        \begin{cases}
+            x_2 + 5x_3 = 0\\
+            4x_1 + 6x_2 - x_3 = 0\\
+            -x_1 + 3x_2 - 8x_3 = 0
+        \end{cases}
+        $$
+        Note that we can write this system of linear equation as the result of a matrix-vector multiplication.
+        $$
+        \begin{bmatrix}
+        0 & 1 & 5\\
+        4 & 6 & -1\\
+        -1 & 3 & -8\\
+        \end{bmatrix}
+        \begin{bmatrix}
+        x_1 \\ x_3 \\ x_3
+        \end{bmatrix} = \begin{bmatrix}0 \\ 0 \\ 0 \end{bmatrix}
+        $$
+        \begin{remark}
+        Matrix-vector multiplication is a linear combination of the matrix, with coefficients given by the entries of the vector, i.e.
+        $$
+        \begin{bmatrix}
+        \vert & & \vert \\
+        \mathbf{a_1} & \cdots & \mathbf{a_n}\\
+        \vert & & \vert
+        \end{bmatrix}
+        \begin{bmatrix}
+        v_1 \\ \vdots \\ v_n
+        \end{bmatrix} = \sum_{j=1}^n v_j\mathbf{a_j}.
+        $$
+        \end{remark}
+        Therefore,
+        $$x_{1}\left[\begin{array}{r}
+        0 \\
+        4 \\
+        -1
+        \end{array}\right]+x_{2}\left[\begin{array}{l}
+        1 \\
+        6 \\
+        3
+        \end{array}\right]+x_{3}\left[\begin{array}{r}
+        5 \\
+        -1 \\
+        -8
+        \end{array}\right]=\left[\begin{array}{l}
+        0 \\
+        0 \\
+        0
+        \end{array}\right]$$
+    \item Determine if $\mathbf{b}$ is a linear combination of $\mathbf{a_1}$, $\mathbf{a_2}$, and $\mathbf{a_3}$.
+        $$\mathbf{a}_{1}=\left[\begin{array}{r}
+        1 \\
+        -2 \\
+        0
+        \end{array}\right], \mathbf{a}_{2}=\left[\begin{array}{l}
+        0 \\
+        1 \\
+        2
+        \end{array}\right], \mathbf{a}_{3}=\left[\begin{array}{r}
+        5 \\
+        -6 \\
+        8
+        \end{array}\right], \mathbf{b}=\left[\begin{array}{r}
+        2 \\
+        -1 \\
+        6
+        \end{array}\right]$$
+        Hint: Try to solve a system of linear equations?
+        $$
+        \left[\begin{array}{ccc|c}
+        1 & 0 & 5 & 2\\
+        -2 & 1 & -6 & -1\\
+        0 & 2 & 8 & 6
+        \end{array}\right]\leadsto
+        \left[\begin{array}{ccc|c}
+        1 & 0 & 5 & 2\\
+        0 & 1 & 4 & 3\\
+        0 & 0 & 0 & 0
+        \end{array}\right]
+        $$
+        Therefore,
+        $$
+        (2 - 5c)\begin{bmatrix}1 \\ -2 \\ 0\end{bmatrix} + (3 - 4c)\begin{bmatrix}0 \\ 1 \\ 2 \end{bmatrix} + c\begin{bmatrix}5 \\ -6 \\ 8\end{bmatrix} = \begin{bmatrix}2 \\ -1 \\ 6\end{bmatrix}.
+        $$
+        \begin{remark}
+        Review this question after learning Linear Independence and see how this problem is connected with the definition of linear dependence.
+        \end{remark}
+    \item Given $\mathbf{A}$ and $\mathbf{b}$ write the augmented matrix for the linear system that corresponds to the matrix equation $A \mathbf{x}=\mathbf{b}$. Then solve the system and write the solution as a vector.
+    $$A=\left[\begin{array}{rrr}1 & 2 & 4 \\ 0 & 1 & 5 \\ -2 & -4 & -3\end{array}\right], \mathbf{b}=\left[\begin{array}{r}-2 \\ 2 \\ 9\end{array}\right]$$
+    $$\left[\begin{array}{rrr|r}1 & 2 & 4 & -2 \\ 0 & 1 & 5 & 2 \\ -2 & -4 & -3 & 9\end{array}\right], \mathbf{x}=\left[\begin{array}{c}x_{1} \\ x_{2} \\ x_{3}\end{array}\right]=\left[\begin{array}{r}0 \\ -3 \\ 1\end{array}\right]$$
+    \item 
+    \begin{enumerate}[(i)]
+        \item Suppose $\mathbf{A}$ is a $3 \times 3$ matrix with three pivot positions. Does the equation $\mathbf{A} \mathbf{x}=\mathbf{0}$ have a nontrivial solution? Does the equation $\mathbf{A} \mathbf{x}=\mathbf{b}$ have at least one solution for every possible $\mathbf{b}$?\\
+        When $\mathbf{A}$ is a $3 \times 3$ matrix with three pivot positions, the equation $\mathbf{A} \mathbf{x}=\mathbf{0}$ has no free variables and hence has no nontrivial solution.\\
+        With three pivot positions, $\mathbf{A}$ has a pivot position in each of its three rows. By Theorem 4 in Section $1.4,$ the equation $\mathbf{A} \mathbf{x}=\mathbf{b}$ has a solution for every possible $\mathbf{b}$. The word "possible" in the exercise means that the only vectors considered in this case are those in $\mathbb{R}^{3}$, because $A$ has three rows.
+        \item Suppose $\mathbf{A}$ is a $3 \times 2$ matrix with two pivot positions. Does the equation $\mathbf{A} \mathbf{x}=\mathbf{0}$ have a nontrivial solution? Does the equation $\mathbf{A} \mathbf{x}=\mathbf{b}$ have at least one solution for every possible $\mathbf{b}$?\\
+        When $\mathbf{A}$ is a $3 \times 2$ matrix with two pivot positions, each column is a pivot column. So the equation $\mathbf{A} \mathbf{x}=\mathbf{0}$ has no free variables and hence no nontrivial solution.\\
+        With two pivot positions and three rows, $\mathbf{A}$ cannot have a pivot in every row. So the equation $\mathbf{A} \mathbf{x}=\mathbf{b}$ cannot have a solution for every possible $\mathbf{b}$ (in $\mathbb{R}^{3}$), by Theorem 4 in Section 1.4.
+    \end{enumerate}
+    \begin{remark}
+    Review this question after learning about the definition of column space.
+    \end{remark}
+    \begin{definition}
+    The column space $C(\mathbf{A})$ of a matrix $\mathbf{A}$ is the span of the columns of $A$. That is, if $A = \begin{bmatrix} \vert & & \vert \\ \mathbf{a_1} & \cdots & \mathbf{a_n} \\ \vert & & \vert\end{bmatrix}$, $C(\mathbf{A}) = \langle \mathbf{a_n}, \cdots, \mathbf{a_n}\rangle$
+    \end{definition}
+    \begin{definition}
+    Let $\boldsymbol{T}\in\mathcal{L}(V,W)$. The kernel or null space of $\boldsymbol{T}$ is the set $\ker\boldsymbol{T}=\{\mathbf{v}\in V\vert \boldsymbol{T}(\mathbf{v})=\mathbf{0}\}$.
+    \end{definition}
+    \begin{corollary}
+    Let $\mathbf{A} = \mathcal{M}_{m,n}(\mathbb{F})$. The linear system $\mathbf{Ax=b}$ is consistent if and only if $\mathbf{b}$ is in the column space of $\mathbf{A}$.
+    \end{corollary}
+    \begin{corollary}
+    A list of vectors $(\mathbf{v_1,\cdots,v_n})$ in $\mathbb{F}^m$ spans $\mathbb{F}^m$ if and only if the RREF of the matrix $A = \begin{bmatrix} \vert & & \vert \\ \mathbf{a_1} & \cdots & \mathbf{a_n} \\ \vert & & \vert\end{bmatrix}$ has a pivot in every row.
+    \end{corollary}
+    
+    \item
+        Note that $\left[\begin{array}{rrr}4 & -3 & 1 \\ 5 & -2 & 5 \\ -6 & 2 & -3\end{array}\right]\left[\begin{array}{r}-3 \\ -1 \\ 2\end{array}\right]=\left[\begin{array}{c}-7 \\ -3 \\ 10\end{array}\right]$. Use this fact (and no row operations) to find scalars $c_{1}, c_{2}, c_{3}$ such that
+        \[
+        \left[\begin{array}{l}
+        -7 \\
+        -3 \\
+        10
+        \end{array}\right]=c_{1}\left[\begin{array}{r}
+        4 \\
+        5 \\
+        -6
+        \end{array}\right]+c_{2}\left[\begin{array}{r}
+        -3 \\
+        -2 \\
+        2
+        \end{array}\right]+c_{3}\left[\begin{array}{r}
+        1 \\
+        5 \\
+        -3
+        \end{array}\right]
+        \]
+        $c_{1}=-3, c_{2}=-1, c_{3}=2$
+\end{enumerate}
+
+\subsection{Subspace}
+\begin{enumerate}[(a)]
+    \item
+    Let $W$ be the set of all vectors of the form $\left[\begin{array}{c}5 b+2 c \\ b \\ c\end{array}\right]$ where $b$ and $c$ are arbitrary. Find vectors $\mathbf{u}$ and $\mathbf{v}$ such that $W=\operatorname{Span}\{\mathbf{u}, \mathbf{v}\}.$ Why does this show that $W$ is a subspace of $\mathbb{R}^{3}?$
+    $$
+    W=\operatorname{Span}\{\mathbf{u}, \mathbf{v}\}, \text { where } \mathbf{u}=\left[\begin{array}{l} 5 \\ 1 \\ 0 \end{array}\right], \mathbf{v}=\left[\begin{array}{l} 2 \\ 0 \\ 1 \end{array}\right].
+    $$
+    \item
+    Let $\mathbf{v}_{1}=\left[\begin{array}{r}1 \\ 0 \\ -1\end{array}\right], \mathbf{v}_{2}=\left[\begin{array}{l}2 \\ 1 \\ 3\end{array}\right], \mathbf{v}_{3}=\left[\begin{array}{l}4 \\ 2 \\ 6\end{array}\right],$ and $\mathbf{w}=\left[\begin{array}{l}3 \\ 1 \\ 2\end{array}\right]$.
+    \begin{enumerate}[(i)]
+        \item Is $\mathbf{w}$ in $\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\} ?$ How many vectors are in $\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\}?$\\
+        There are only three vectors in $\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\},$ and $\mathbf{w}$ is not one of them.
+        \item How many vectors are in $\operatorname{Span}\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\}?$\\
+        There are infinitely many vectors in $\operatorname{Span}\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\}$.
+        \item Is $\mathbf{w}$ in the subspace spanned by $\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\}?$ Why?\\
+        $\mathbf{w}$ is in $\operatorname{Span}\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\}$.
+    \end{enumerate}
+    \item Let $W$ be the set of all vectors of the form shown, where $a, b,$ and $c$ represent arbitrary real numbers. In each case, either find a set $S$ of vectors that spans $W$ or give an example to show that $W$ is not a vector space.
+    \begin{enumerate}[(i)]
+        \item
+        $\left[\begin{array}{c}3 a+b \\ 4 \\ a-5 b\end{array}\right]$\\
+        Not a vector space because the zero vector is not in $W$.
+        \item
+        $\left[\begin{array}{c}a-b \\ b-c \\ c-a \\ b\end{array}\right]$
+        $$
+        S=\left\langle\left[\begin{array}{r}1 \\ 0 \\ -1 \\ 0\end{array}\right],\left[\begin{array}{r}-1 \\ 1 \\ 0 \\ 1\end{array}\right],\left[\begin{array}{r}0 \\ -1 \\ 1 \\ 0\end{array}\right]\right\rangle
+        $$
+    \end{enumerate}
+    \item
+    Determine if $\mathbf{w}=\left[\begin{array}{r}1 \\ 3 \\ -4\end{array}\right]$ is in $\mathrm{Nul} \mathbf{A},$ where
+    \[
+    \mathbf{A}=\left[\begin{array}{rrr}
+    3 & -5 & -3 \\
+    6 & -2 & 0 \\
+    -8 & 4 & 1
+    \end{array}\right].
+    \]
+    $$\left[\begin{array}{rrr}
+    3 & -5 & -3 \\
+    6 & -2 & 0 \\
+    -8 & 4 & 1
+    \end{array}\right]\left[\begin{array}{r}
+    1 \\
+    3 \\
+    -4
+    \end{array}\right]=\left[\begin{array}{l}
+    0 \\
+    0 \\
+    0
+    \end{array}\right], \text { so } \mathbf{w} \text { is in } \mathrm{Nul} \mathbf{A}$$
+\end{enumerate}

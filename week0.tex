@@ -1,6 +1,6 @@
 \section{Week 0: System of Linear Equations}
 
-\subsection{Solving System of Linear Equations by Row Reduce}
+\subsection{Solving System of Linear Equations by Row Reduction}
 \begin{enumerate}[(a)]
     \item The augmented matrices of two system of linear equations has been reduced by row operations to the form below. In each case, continue the appropriate row operations and describe the solution set of the original system.
     \begin{enumerate}[i]
@@ -13,6 +13,23 @@
             0 & 0 & 1 & -2
         \end{array}\right]
         $$
+        Swap row 3 with row 4:
+        $$\left[\begin{array}{ccc|c}1 & 7 & 3 & -4 \\ 0 & 1 & -1 & 3 \\ 0 & 0 & 1 & -2 \\ 0 & 0 & 0 & 1\end{array}\right]$$
+        Add $2 \times(\operatorname{row}\;4)$ to row 3:
+        $$\left[\begin{array}{ccc|c}1 & 7 & 3 & -4 \\ 0 & 1 & -1 & 3 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{array}\right]$$
+        Subtract $3 \times(\operatorname{row \; 4})$ from row 2 $$\left[\begin{array}{cccc}1 & 7 & 3 & -4 \\ 0 & 1 & -1 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{array}\right]$$
+        Add $4 \times(\operatorname{row}\;4)$ to row 1:
+        $$\left[\begin{array}{lll|l}1 & 7 & 3 & 0 \\ 0 & 1 & -1 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{array}\right]$$
+        Add row 3 to row 2 :
+        $$\left[\begin{array}{lll|l}1 & 7 & 3 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{array}\right]$$
+        Subtract $3 \times(\text {row 3})$ from row 1:
+        $$\left[\begin{array}{lll|l}1 & 7 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{array}\right]$$
+        Subtract $7 \times(\text {row 2})$ from row 1:
+        $$\left[\begin{array}{lll|l}1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{array}\right]$$
+        This matrix is now in reduced row echelon form.
+        All non-zero rows are above rows of all zeros (there are no rows of all zeros):
+        $$\left[\begin{array}{lll|l}1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{array}\right]$$
+        This system is inconsistent i.e. the solution set is $\emptyset$.
         \item
         $$
         \left[\begin{array}{rrrr|r}
@@ -22,14 +39,84 @@
             0 & 0 & 0 & 2 & 4
         \end{array}\right]
         $$
+        Divide row 4 by 2:
+        \[
+        \left[\begin{array}{cccc|c}
+        1 & -1 & 0 & 0 & -4 \\
+        0 & 1 & -3 & 0 & -7 \\
+        0 & 0 & 1 & -3 & -1 \\
+        0 & 0 & 0 & 1 & 2
+        \end{array}\right]
+        \]
+        Add $3 \times(\operatorname{row}\,4)$ to row 3:
+        \[
+        \left[\begin{array}{cccc|c}
+        1 & -1 & 0 & 0 & -4 \\
+        0 & 1 & -3 & 0 & -7 \\
+        0 & 0 & 1 & 0 & 5 \\
+        0 & 0 & 0 & 1 & 2
+        \end{array}\right]
+        \]
+        Add $3 \times(\operatorname{row}\,3)$ to row 2:
+        \[
+        \left[\begin{array}{cccc|c}
+        1 & -1 & 0 & 0 & -4 \\
+        0 & 1 & 0 & 0 & 8 \\
+        0 & 0 & 1 & 0 & 5 \\
+        0 & 0 & 0 & 1 & 2
+        \end{array}\right]
+        \]
+        Add $2 \times(\operatorname{row}\,2)$ to row 1:
+        \[
+        \left[\begin{array}{cccc|c}
+        1 & 0 & 0 & 0 & 4
+        \\
+        0 & 1 & 0 & 0 & 8 \\
+        0 & 0 & 1 & 0 & 5 \\
+        0 & 0 & 0 & 1 & 2
+        \end{array}\right]
+        \]
+        The solution to the given system is
+        $$
+        \left\{\begin{bmatrix*}4 \\ 8 \\ 5 \\ 2\end{bmatrix*}\right\}
+        $$
     \end{enumerate}
     \item
     Find the general solutions of the systems whose augmented matrices are given below.
     \begin{enumerate}[i]
         \item
-        $\left[\begin{array}{ccc|c}1 & 3 & 4 & 7 \\ 3 & 9 & 7 & 6\end{array}\right]$
+        $$\left[\begin{array}{ccc|c}1 & 3 & 4 & 7 \\ 3 & 9 & 7 & 6\end{array}\right]$$
+        The REF of the augmented matrix is
+        $$
+        \left[
+            \begin{array}{ccc|c}
+             1 & 3 & 4 & 7 \\
+             0 & 0 & 1 & 3 \\
+            \end{array}
+        \right]
+        $$
+        The RREF of the augmented matrix is
+        $$
+        \left[
+            \begin{array}{ccc|c}
+             1 & 3 & 0 & -5 \\
+             0 & 0 & 1 & 3 \\
+            \end{array}
+        \right]
+        $$
         \item
-        $\left[\begin{array}{rrr|r}0 & 1 & -6 & 5 \\ 1 & -2 & 7 & -6\end{array}\right]$
+        $$
+        \left[\begin{array}{rrr|r}0 & 1 & -6 & 5 \\ 1 & -2 & 7 & -6\end{array}\right]
+        $$
+        The REF of the augmented matrix is
+        $$
+        \left[
+            \begin{array}{ccc|c}
+             1 & -2 & 7 & -6 \\
+             0 & 1 & -6 & 5 \\
+            \end{array}
+        \right]
+        $$
     \end{enumerate}
     
  \end{enumerate}   
@@ -83,29 +170,31 @@
             -3 x_{2}-6 x_{3}=0
         \end{cases}
     \end{equation*}
-    %$$\mathbf{x}=\left[\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right]=x_{3}\left[\begin{array}{r}5 \\ -2 \\ 1\end{array}\right]$$%
+    Solution
+    $$\mathbf{x}=\left[\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right]=x_{3}\left[\begin{array}{r}5 \\ -2 \\ 1\end{array}\right]$$
     \item
     Follow the method of Example 3 to describe the solutions of the following system in parametric vector form. Also, give a geometric description of the solution set and compare it to that in Exercise 5
     \begin{equation*}
         \begin{cases}
-            x_{1}+3 x_{2}+x_{3} &=1 \\
-            -4 x_{1}-9 x_{2}+2 x_{3} &=-1 \\
-            -3 x_{2}-6 x_{3} &=-3
+            x_{1}+3 x_{2}+x_{3}=1 \\
+            -4 x_{1}-9 x_{2}+2 x_{3}=-1 \\
+            -3 x_{2}-6 x_{3} =-3
         \end{cases}
     \end{equation*}
-    %$$
-    %\mathbf{x}=\left[\begin{array}{l}
-    %x_{1} \\
-    %x_{2} \\
-    %x_{3}
-    %\end{array}\right]=\left[\begin{array}{r}
-    %-2 \\
-    %1 \\
-    %0
-    %\end{array}\right]+x_{3}\left[\begin{array}{r}
-    %5 \\
-    %-2 \\
-    %1
-    %\end{array}\right]
-    %$$
+    Solution
+    $$
+    \mathbf{x}=\left[\begin{array}{l}
+    x_{1} \\
+    x_{2} \\
+    x_{3}
+    \end{array}\right]=\left[\begin{array}{r}
+    -2 \\
+    1 \\
+    0
+    \end{array}\right]+x_{3}\left[\begin{array}{r}
+    5 \\
+    -2 \\
+    1
+    \end{array}\right]
+    $$
 \end{enumerate}
