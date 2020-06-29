@@ -1,0 +1,49 @@
+\newpage
+\section{Week 2: Vector Space (Cont.d)}
+\subsection{Basis}
+\begin{enumerate}[(a)]
+    \item Find a basis for the set of vectors in $\mathbb{R}^{3}$ in the plane $x+2 y+z=0$.[Hint: Think of the equation as a "system" of homogeneous equations.]
+    $$
+    \left[\begin{array}{r}-2 \\ 1 \\ 0\end{array}\right],\left[\begin{array}{r}-1 \\ 0 \\ 1\end{array}\right]
+    $$
+    \item Find a basis for the space spanned by the given vectors, $\mathbf{v}_{1}, \ldots, \mathbf{v}_{5}$.
+    $$
+    \left[\begin{array}{r}1 \\ 0 \\ -3 \\ 2\end{array}\right],\left[\begin{array}{r}0 \\ 1 \\ 2 \\ -3\end{array}\right],\left[\begin{array}{r}-3 \\ -4 \\ 1 \\ 6\end{array}\right],\left[\begin{array}{r}1 \\ -3 \\ -8 \\ 7\end{array}\right],\left[\begin{array}{r}2 \\ 1 \\ -6 \\ 9\end{array}\right]
+    $$
+    $\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{4}\right\}$
+    \item Let $\mathbf{v}_{1}=\left[\begin{array}{l}1 \\ 0 \\ 1\end{array}\right], \mathbf{v}_{2}=\left[\begin{array}{l}0 \\ 1 \\ 1\end{array}\right], \mathbf{v}_{3}=\left[\begin{array}{l}0 \\ 1 \\ 0\end{array}\right]$, and let $H$ be the set of vectors in $\mathbb{R}^{3}$ whose second and third entries are equal. Then every vector in $H$ has a unique expansion as a linear combination of $\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3},$ because
+    $$\left[\begin{array}{l}s \\ t \\ t\end{array}\right]=s\left[\begin{array}{l}1 \\ 0 \\ 1\end{array}\right]+(t-s)\left[\begin{array}{l}0 \\ 1 \\ 1\end{array}\right]+s\left[\begin{array}{l}0 \\ 1 \\ 0\end{array}\right]
+    $$
+    for any $s$ and $t$. Is $\left\{\mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3}\right\}$ a basis for $H$? Why or why not?
+    No.
+    \item Find the dimension of the subspace spanned by the given vectors.
+    $$
+    \left[\begin{array}{l}1 \\ 0 \\ 2\end{array}\right],\left[\begin{array}{l}3 \\ 1 \\ 1\end{array}\right],\left[\begin{array}{r}9 \\ 4 \\ -2\end{array}\right],\left[\begin{array}{r}-7 \\ -3 \\ 1\end{array}\right]
+    $$
+    The dimension is 2.
+    \item For the given subspace in this question find a basis, and state the dimension
+    $$
+    \left\{\left[\begin{array}{c}a-4 b-2 c \\ 2 a+5 b-4 c \\ -a+2 c \\ -3 a+7 b+6 c\end{array}\right]: a, b, c \in \mathbb{R}\right\}
+    $$
+    $$
+    \left[\begin{array}{r}1 \\ 2 \\ -1 \\ -3\end{array}\right],\left[\begin{array}{r}-4 \\ 5 \\ 0 \\ 7\end{array}\right]
+    $$
+    The dimension is 2.
+    
+    \subsection{Rank and Nullity}
+    Assume that the matrix $\mathbf{A}$ is row equivalent to $\mathbf{B}$. Without calculations, list rank $A$ and $\operatorname{dim} \mathrm{Nul} A$. Then find bases for $\mathrm{Col} A,$ Row $A,$ and $\mathrm{Nul} A$.
+    $$A=\left[\begin{array}{rrrr}1 & -4 & 9 & -7 \\ -1 & 2 & -4 & 1 \\ 5 & -6 & 10 & 7\end{array}\right]$$
+    \[
+    B=\left[\begin{array}{rrrr}
+    1 & 0 & -1 & 5 \\
+    0 & -2 & 5 & -6 \\
+    0 & 0 & 0 & 0
+    \end{array}\right]
+    \]
+    $\operatorname{rank} A=2$;\\
+    $\operatorname{dim} \operatorname{Nul} A=2$;\\
+    Basis for Col
+    $$A:\left[\begin{array}{r}1 \\ -1 \\ 5\end{array}\right],\left[\begin{array}{r}-4 \\ 2 \\ -6\end{array}\right]$$\\
+    Basis for Row $$A:(1,0,-1,5),(0,-2,5,-6)$$.\\
+    Basis for Nul $$A:\left[\begin{array}{c}1 \\ 5 / 2 \\ 1 \\ 0\end{array}\right],\left[\begin{array}{r}-5 \\ -3 \\ 0 \\ 1\end{array}\right]$$
+\end{enumerate}
